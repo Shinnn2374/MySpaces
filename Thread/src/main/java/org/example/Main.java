@@ -46,6 +46,24 @@ public class Main {
 //        System.out.println("Главный поток");
 //        t.setPriority(7);
 //        System.out.println(t);
-        
+// task four
+        System.out.println("Начинает выполняться главный поток");
+        fourTask A = new fourTask("ALPHA",5);
+        fourTask B = new fourTask("BRAVO",3);
+        fourTask C = new fourTask("CHARLIE",7);
+        for (int k = 0; k <= 4; k++) {
+            System.out.println("Сообщение от главного потока:\t"+k);
+            Thread.sleep(2000);
+        }
+        if (A.isAlive()){
+            A.join();
+        }
+        if (B.isAlive()){
+            B.join();
+        }
+        if (C.isAlive()){
+            C.join();
+        }
+        System.out.println("Главный поток завершен");
     }
 }
