@@ -18,27 +18,34 @@ public class Main {
 //        System.out.println("Программа выполнена");
 //   _______________________________________________
 // second task
-            Thread t = new Thread(new Runnable(){
-                public void run(){
-                    for (int i = 0; i < 5; i++) {
-                        System.out.println("Дочерний поток");
-                        try {
-                            Thread.sleep(1200);
-                        }catch (InterruptedException e){
-                            System.out.println("Прерывание дочернего потока");
-                        }
-                    }
-                }
-            });
-        System.out.println("Запускается дочерний поток");
-        t.start();
-        for (int i = 0; i < 5; i++) {
-            System.out.println("Главный поток");
-            Thread.sleep(1200);
-        }
-        if (t.isAlive()) {
-            t.join();
-        }
-        System.out.println("Выполнение программы завершено");
+//            Thread t = new Thread(new Runnable(){
+//                public void run(){
+//                    for (int i = 0; i < 5; i++) {
+//                        System.out.println("Дочерний поток");
+//                        try {
+//                            Thread.sleep(1200);
+//                        }catch (InterruptedException e){
+//                            System.out.println("Прерывание дочернего потока");
+//                        }
+//                    }
+//                }
+//            });
+//        System.out.println("Запускается дочерний поток");
+//        t.start();
+//        for (int i = 0; i < 5; i++) {
+//            System.out.println("Главный поток");
+//            Thread.sleep(1200);
+//        }
+//        if (t.isAlive()) {
+//            t.join();
+//        }
+//        System.out.println("Выполнение программы завершено");
+// task three
+//        Thread t;
+//        t = Thread.currentThread();
+//        System.out.println("Главный поток");
+//        t.setPriority(7);
+//        System.out.println(t);
+        
     }
 }
