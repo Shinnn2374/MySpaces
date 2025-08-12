@@ -4,4 +4,6 @@ import com.example.light_app.model.User;
 import org.springframework.data.repository.CrudRepository;
 
 public interface UserRepository extends CrudRepository<User, Long> {
+    User findUserByEmail(String email);
+    void deleteById(Integer id);
 }
