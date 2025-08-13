@@ -14,16 +14,16 @@ public class CardServiceImpl implements CardService {
 
     @Override
     public Card createCard(Card card) {
-        return null;
+        return cardRepository.save(card);
     }
 
     @Override
     public Card findByCVV(String cvv) {
-        return null;
+        return cardRepository.findByCVV(cvv);
     }
 
     @Override
     public void deleteByCVV(String cvv) {
-
+        cardRepository.removeCardByCVV(cvv);
     }
 }
